@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class Resposta : MonoBehaviour {
 
-	GameObject manager;
+	//GameObject manager;
 	public Text textoResposta;
 
 	// Use this for initialization
 	void Start () {
-		manager = GameObject.FindGameObjectWithTag ("result");
+		//manager = GameObject.FindGameObjectWithTag ("result");
 		//textoResposta.text = gameObject.GetComponent<Text>();
-		textoResposta.text = "testando";
+		textoResposta.text = ApplicationModel.resultado.ToString();
 		//manager.GetComponent<GameManager> ().resultadoTotalDecimal.ToString ();
 
 	}

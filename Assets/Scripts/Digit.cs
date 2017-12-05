@@ -35,7 +35,10 @@ public class Digit : MonoBehaviour {
 		// adicionar o valor atualizado da carta (que pode ser negativo ou positivo),
 		// utilizando o script GameManager -> Component do ResultText.
 		manager.GetComponent<GameManager>().resultadoTotalDecimal += valorAdicionado;
-		//manager.GetComponent<Text> ().text = (card.valorDecimalDaCarta * card.sinal).ToString();
-		manager.GetComponent<Text> ().text = manager.GetComponent<GameManager>().resultadoTotalDecimal.ToString();
+
+		// Guardar valor em decimal e atualizar Text da cena com o valor
+		valorTotalDecimal = manager.GetComponent<GameManager>().resultadoTotalDecimal;
+		manager.GetComponent<Text> ().text = valorTotalDecimal.ToString ();
+		ApplicationModel.resultado = valorTotalDecimal;
 	}
 }

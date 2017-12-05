@@ -20,11 +20,11 @@ public class GameManager : MonoBehaviour {
 		//textoTempo.text = "0";
 	}
 
-	//Button btn = gameObject.GetComponent<Button> ();
-	//btn.onClick.AddListener (TaskOnClick);
-	public void VerificarResposta() {
+
+	public void VerificarResposta(/*CardController c4, CardController c3, CardController c1, CardController c0*/) {
 		Debug.Log ("Resposta certa: " + resultadoTotalDecimal.ToString());
-		SceneManager.LoadScene ("Answer");
+		//if (c0.front && )
+		SceneManager.LoadScene ("Answer1");
 	}
 
 	// Update is called once per frame

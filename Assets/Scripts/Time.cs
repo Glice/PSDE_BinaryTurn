@@ -9,7 +9,8 @@ public class Time : MonoBehaviour {
 	
 	public int resultadoTotalDecimal = 0;
 	public DateTime tempoInicial;
-	public int tempoNivelSegundos = 60;
+	public DateTime tempoFinal;
+	public double tempoNivelSegundos;
 	public Text textoTempo;
 
 	// Use this for initialization
@@ -17,26 +18,25 @@ public class Time : MonoBehaviour {
 		// Atualizar Text do tempo restante
 		textoTempo.text = tempoNivelSegundos.ToString();
 
-		//PARA FAZER
-		//RECADO PARA HERICK S2 HAHA
-		//pegar tempo do sistema em segundos
-		//tempoInicial = ...
+		// Pegar tempo do sistema
+		tempoInicial = DateTime.Now;
 
+		// Configurar tempo final do jogo
+		tempoNivelSegundos = 15;
+		tempoFinal = tempoInicial.AddSeconds(tempoNivelSegundos);
 	}
 
 
 
 	// Update is called once per frame
 	void Update () {
-		
-		//PARA FAZER
-		//RECADO PARA HERICK
-		// Atualizar Text do tempo restante
-		//textoTempo.text = ...
-
-		//verificar se passaram 60 segundos (tempoNivelSegundos)
-		//se sim
-		//chamar cena de tempo esogotado: (descomentar próxima linha)
-		//SceneManager.LoadScene ("TimeOver");
+		// Se tempo atual ainda for menor anterior ao final do nível
+		if (DateTime.Now < tempoFinal) {
+			// Atualizar Text do tempo restante
+			textoTempo.text = (tempoFinal - DateTime.Now).Seconds.ToString ();
+		} else { // Tempo esgotado
+			Debug.Log ("Tempo acabou");
+			SceneManager.LoadScene ("TimeOver");
+		}
 	}
 }
