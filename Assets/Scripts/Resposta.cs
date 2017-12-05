@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Resposta : MonoBehaviour {
@@ -22,4 +23,5 @@ public class Resposta : MonoBehaviour {
 	void Update () {
 		//textoResposta.text = manager.GetComponent<GameManager> ().resultadoTotalDecimal.ToString ();
 	}
+
 }

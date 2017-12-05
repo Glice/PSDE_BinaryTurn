@@ -11,6 +11,7 @@ public class Digit : MonoBehaviour {
 	void Start () {
 		valorTotalDecimal = 0;
 		manager = GameObject.FindGameObjectWithTag ("result");
+		ApplicationModel.resultado = 0;
 	}
 		
 	// Update is called once per frame

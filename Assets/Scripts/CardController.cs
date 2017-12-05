@@ -35,18 +35,6 @@ public class CardController : MonoBehaviour {
 	// Se é a frente ou não da carta, troca o sprite da respectiva imagem
 	void TaskOnClick() {
 		/*
-		Debug.Log ("Clicked the button");
-		//Sprite cardBack = Resources.Load <Sprite>("cardBack_red5");
-		//Sprite cardFront = Resources.Load <Sprite> ("cardDiamondsA");
-		if (front == 1) {
-			front = 0;
-			Debug.Log ("Showing back");
-			gameObject.GetComponent<Image> ().sprite = myCardBack;
-		} else {
-			front = 1;
-			Debug.Log ("Showing front");
-			gameObject.GetComponent<Image> ().sprite = myCardFront;
-		}
 		//restaurar?
 		/*gameObject.GetComponent<GameManager> ().AlterarValorDigito (front);*/
 

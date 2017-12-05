@@ -16,6 +16,10 @@ public class Menu : MonoBehaviour {
 		
 	}
 
+	public void OpenHomeScene() {
+		SceneManager.LoadScene ("Home");
+	}
+
 	public void OpenLearnScene() {
 		SceneManager.LoadScene ("Learn");
 	}
@@ -28,8 +32,8 @@ public class Menu : MonoBehaviour {
 		SceneManager.LoadScene ("Level1");
 	}
 
-	public void OpenHomeScene() {
-		SceneManager.LoadScene ("Home");
+	public void OpenLevel2Scene() {
+		SceneManager.LoadScene ("Level2");
 	}
 
 }

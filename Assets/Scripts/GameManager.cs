@@ -21,10 +21,25 @@ public class GameManager : MonoBehaviour {
 	}
 
 
-	public void VerificarResposta(/*CardController c4, CardController c3, CardController c1, CardController c0*/) {
+	public void VerificarRespostaNivel1() {
+		if (ApplicationModel.resultadoCertoNivel1) {
+			Debug.Log ("Resposta certa!");
+			SceneManager.LoadScene ("Answer1");
+		} else {
+			Debug.Log ("Resposta errada!");
+			SceneManager.LoadScene ("Answer2");
+		}
+	}
+
+	public void VerificarResposta() {
 		Debug.Log ("Resposta certa: " + resultadoTotalDecimal.ToString());
-		//if (c0.front && )
-		SceneManager.LoadScene ("Answer1");
+
+		// ATUALIZAR - Condição somente para teste
+		if (15 == ApplicationModel.resultado) {
+			SceneManager.LoadScene ("Answer1_N2");
+		} else {
+			SceneManager.LoadScene ("Answer2_N2");
+		}
 	}
 
 	// Update is called once per frame
