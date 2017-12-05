@@ -22,7 +22,7 @@ public class Time : MonoBehaviour {
 		tempoInicial = DateTime.Now;
 
 		// Configurar tempo final do jogo
-		tempoNivelSegundos = 15;
+		tempoNivelSegundos = 40;
 		tempoFinal = tempoInicial.AddSeconds(tempoNivelSegundos);
 	}
 
