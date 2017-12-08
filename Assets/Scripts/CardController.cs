@@ -11,7 +11,7 @@ public class CardController : MonoBehaviour {
 	public int valorDecimalTotal;
 
 	// Sprites (frente e verso) para atribuir à imagem clicada
-	Image myImageComponent;
+	//Image myImageComponent;
 	public Sprite myCardFront;
 	public Sprite myCardBack;
 
@@ -23,7 +23,7 @@ public class CardController : MonoBehaviour {
 		btn.onClick.AddListener (TaskOnClick);
 
 		// <Image> para auxiliar troca de sprites (variável recebe a própria imagem do componente para depois ser alterada no click)
-		myImageComponent = GetComponent<Image>();
+		//myImageComponent = GetComponent<Image>();
 
 	}
 	

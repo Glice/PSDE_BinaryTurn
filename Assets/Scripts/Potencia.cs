@@ -27,20 +27,20 @@ public class Potencia : MonoBehaviour {
 	public void TrocarPotencia(int referencia) {
 		potenciaCounter++;
 		//ApplicationModel.resultadoCertoNivel1 = false;
-		if (potenciaCounter == referencia) { // resposta certa
+		if (potenciaCounter == referencia) { // resposta certa para aquela carta
 			ApplicationModel.resultadoCerto[referencia] = 1;
 			ApplicationModel.resultadoCertoNivel1 = true;
 			for (int i = 0; i < 4; i++) {
-				Debug.Log ("ResultadoCerto?" + i + ": " + ApplicationModel.resultadoCerto [i]);
+				//Debug.Log ("ResultadoCerto?" + i + ": " + ApplicationModel.resultadoCerto [i]);
 				if (ApplicationModel.resultadoCerto[i] != 1) { 
 					ApplicationModel.resultadoCertoNivel1 = false;
 				}
 			}
-			Debug.Log ("ResultadoCertoNivel1? final_if: " + ApplicationModel.resultadoCertoNivel1);
+			Debug.Log ("ResultadoCertoNivel1: " + ApplicationModel.resultadoCertoNivel1);
 		} else {
 			ApplicationModel.resultadoCerto[referencia] = 0;
 			ApplicationModel.resultadoCertoNivel1 = false;
-			Debug.Log ("ResultadoCertoNivel1? else: " + ApplicationModel.resultadoCertoNivel1);
+			Debug.Log ("ResultadoCertoNivel1: " + ApplicationModel.resultadoCertoNivel1);
 		}
 
 		// Atualizar texto da potência
